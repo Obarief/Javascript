@@ -1,5 +1,6 @@
 // fetch
 
+
 // sebuah method pada API javascript untuk mengambil resource dari jaringan, dan mengembalikan promise yang selesai (fulfilled) ketika ada response yang tersedia, dalam kasus ini sebuah api true maka fulfilled ketika false maka rejected, ketika datanya banyak/jaringannya lemot maka pending 
 
 // fetch(resource(URL) atau (object request), init (opsional bentuknya object (header, body, method)))
@@ -7,38 +8,64 @@
 // hasil dari fetch = property(status 200 dll)
 
 
-// tanpa ajax (vanilla javascript)
-const searchButton = document.querySelector('.search-button');
-searchButton.addEventListener('click', function(){
+// fetch refactory (async await)
+const searchButton = document.querySelector('.search-button')
+searchButton.addEventListener('click', async function(){
     const inputKeyword = document.querySelector('.input-keyword');
-    fetch('http://www.omdbapi.com/?apikey=ee6e8b41&s=' + inputKeyword.value) // karena mengembalikan fungsi promise maka harus ada ketika keadaan fulfilled atau rejected menggunakan .then dan .catch
+    const movies = await getMovies(inputKeyword.value);
+    updateUI(movies)
 
-    .then(response => response.json()) // untuk mengganti data respone dari promise ke json
-    .then(response => {
-        const movies = response.Search;
-        let cards = '';
-        movies.forEach(m => cards += showCards(m))// untuk mengganti data json ke object
-        
-        const movieContainer = document.querySelector('.movie-container');
-        movieContainer.innerHTML = cards;
+    // async pada function dan await pada variabel movies akan menandakan bahwa fungsi yang dibuat adalan asinkronus dan untuk mendapatkan data API harus await (menunggu) sampai fulfilled baru di console.log()-kan
 
-        // ketika detail di klick (diletakkan di dalam fetch tombol search karena ini akan dieksekusi bila tombol search sudah di klik dan halaman html memunculkan tombol detailnnya)
-        const modalDetailButton = document.querySelectorAll('.modal-detail-button');
-        modalDetailButton.forEach(btn => { // nodelist dari button diperulangi menjadi single 
-            btn.addEventListener('click', function(){
-                const imdbid = this.dataset.imdbid;
-                fetch('http://www.omdbapi.com/?apikey=ee6e8b41&i=' + imdbid)
-                .then(response => response.json())
-                .then(m => {
-                    const movieDetail = showMovieDetail(m);
-                    const modalBody = document.querySelector('.modal-body');
+    // kalau langsung console.log() maka yang menjadi output adalah undefined atau promise (karena terbacanya sebagai sinkronus walau didalam variabelnya ada dungsi yang asinkronus).
 
-                    modalBody.innerHTML = movieDetail;
-                })
-            })
-        })
-    }) 
+    // js tidak mengetahui bahwa getMovies adalah fungsi yang asinkronus sehingga event loopnya tidak sempat membaca callback queue dan keburu di console.log()-kan
 });
+
+// ketika tombol detail di click (dibuat independen agar lebih rapih, namun tombol detail akan dieksekusi ketika halaman web dibuka namun belum ada tombol detail, jadi bagaimana solusinya ?) seperti mendahului takdir bila kita langsung menggunakan queryselector independen diluar fungsi search
+
+// event binding (untuk menentukan suatu aksi yang sebelumnya tidak ada namun nantinya ada contoh: setelah mengeklik search)
+document.addEventListener('click', async function(e){
+    if(e.target.classList.contains('modal-detail-button')){
+        const imdbid = e.target.dataset.imdbid;
+        const movieDetail = await getMoviesDetail(imdbid);
+        updateUIDetail(movieDetail)
+    }
+    // document adalah seluruh halaman web
+    // e yang akan menjadi target
+    // classList = cari list kelas
+    // contains = yang mengandung
+    // modal-detail-button = tombol detail (tidak perlu memakai .(class) karena sudah ada classList = artinya sudah pasti yang dicari adalah sebuah class)
+})
+
+
+
+
+function getMovies(keyword){
+    return fetch('http://www.omdbapi.com/?apikey=ee6e8b41&s=' + keyword)
+    .then(response => response.json())
+    .then(response => response.Search)
+}
+
+function updateUI(movies){
+    let cards = '';
+    movies.forEach(m => cards += showCards(m));
+    const movieContainer = document.querySelector('.movie-container');
+    movieContainer.innerHTML = cards;
+}
+
+function getMoviesDetail(imdbid){
+    return fetch('http://www.omdbapi.com/?apikey=ee6e8b41&i=' + imdbid)
+    .then(response => response.json())
+    .then(m => m) // jadikan json ke object
+}
+
+function updateUIDetail(m){
+    const movieDetail = showMovieDetail(m);
+    const modalBody = document.querySelector('.modal-body');
+    modalBody.innerHTML = movieDetail;
+}
+
 
 
 
@@ -75,9 +102,7 @@ function showMovieDetail(m){
                     </div>`
 };
 
-
 // HTML
-
 // <!doctype html>
 // <html lang="en">
 //   <head>
