@@ -1,0 +1,40 @@
+number = floating point = pecahan (64bit)
+bilangan bulat = 15 digit
+desimal (.)
+eksponen 123e5 = 12300000
+bilangan negatif
+*angka spesial
+2/0 = infinity
+-2/0 = -infinity
+100/"apel" = Not a number
+100/"10" = 10
+
+operator
+binary = 2 operand
+unary = 1 operand
+ternary = 3 operand
+
+=================================================================================
+Hoisting = menaikan sebuah variabel (seperti membaca, kek gmn ya jelasinnya...) seperti mendahului takdir cenah.
+
+function scope = dapat memanggil diluar function
+var = akan diisi menjadi undefined (karena belum di tentukan namun terdapat wadahnya)
+deskripsi : dibuat untuk
+
+block scope = (bahasa pemrograman lain seperti ini (default)) memanggil hanya didalam function
+let = akan error (karena tidak mungkin ada isi sebelum di tentukan isinya) dan nilainya bisa berubah
+const = nilainya tidak bisa berubah, dapat mengubah namun isi dari value dari objek dan menambah isi array dll
+=================================================================================
+
+**DOM = bukanlah bahasa pemrograman melainkan struktur dalam sebuah web
+sebagai interaktivitas walau css juga sudah dapat seperti itu namun akan lebih mudah jika menggunakan js
+
+
+window - document/ -  html - head (title, meta, dll) - body (a, p, h1, dll)
+
+nodelist = kumpulan element dan text
+htmlcollection = kumpulan element
+
+root node = document
+parent node = head, body, dll
+child node = p, a, dll
