@@ -40,6 +40,7 @@ document.addEventListener('click', async function(e){
 
 
 
+// function
 
 function getMovies(keyword){
     return fetch('http://www.omdbapi.com/?apikey=ee6e8b41&s=' + keyword)
