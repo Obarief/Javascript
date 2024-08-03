@@ -1,0 +1,42 @@
+apa itu nodejs ?
+- javascript runtime yang dibuat didalam angine v8 di google chrome
+- runtime untuk membuat aplikasi asinkronus
+
+karakteristik
+- asinkronus & event driven
+- non - blocking
+- single threaded but highly scalable
+- cross platform
+- open source
+- node package manager = kumpulan library 
+
+fitur utama 
+- file system
+- buffer = kelola binary dari file
+- http & https = req and resp
+- REPL = eksekusi kode lewat terminal CLI
+- console
+- crypto
+- ZLIP
+
+perbedaan nodejs dan php
+- runtime & bahasa pemrograman
+- sinkronus(multi-thread-blocking) & asinkronus(single-thread-non blocking)
+- berjalan di runtime sendiri & apache
+- NPM & composer
+
+cocok untuk apa ?
+- 1 halaman namun dinamis (realtime app) = chat, game
+- API
+- app streaming, microservice (aplikasi besar didalamnya banyak aplikasi)
+- command line tool
+- MERN, MEAN, MEVN
+
+pre requisite
+- js dasar
+- modern js (ES6)
+
+system and software req
+- windows
+- code editor
+- terminal (git bash)
