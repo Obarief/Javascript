@@ -21,7 +21,7 @@ fitur utama
 
 perbedaan nodejs dan php
 - runtime & bahasa pemrograman
-- sinkronus(multi-thread-blocking) & asinkronus(single-thread-non blocking)
+- asinkronus(single thread-non blocking) & sinkronus(multi thread-blocking)
 - berjalan di runtime sendiri & apache
 - NPM & composer
 
@@ -40,3 +40,40 @@ system and software req
 - windows
 - code editor
 - terminal (git bash)
+
+
+REPL (seperti console di browser)
+- read
+- eval
+- print
+- loop
+
+= untuk mengeksekusi file dari command, menggunakan command (node)
+
+Command dalam REPL:
+-.load = untuk membaca file
+-.break/.clear = ketika tidak ingin melanjutkan script
+-.exit = keluar dari REPL
+-.save = save file
+-.editor = editor text seperti vi namun didalam REPL
+-.help = meilhat command yang dapat digunakan dalam REPL
+
+
+mencoba REPL *contoh
+- buat file (touch coba.js)
+- masuk file (vi coba.js)
+- tulis command (i) = untuk insert lalu tulis scriptnya, (esc) untuk keluar dari mode insert, (:wq = write quit) untuk keluar dari kode editor (vi)
+- masuk ke REPL (node)
+- menyerap script (.load coba.js)
+- tulis apa yang ingin di keluarkan (nama/umur) 
+- menghapus file (rm coba.js)
+
+jika didalam repl ingin langsung menyimpan sdriptnya
+- masuk ke REPL (node)
+- buat script
+- .save coba.js
+*namun ketika mengalami kesalahan dia juga akan tersimpan dalam file untuk menghapusnya adalah dengan keluar dari REPL dan jalankan editor teks (vi)
+- vi coba.js
+
+**apa yang di ketik di dalam REPL lalu di save dengan (.save) maka akan tersimpan, sekali pun itu adalah perintah untuk menjalankan script
+
