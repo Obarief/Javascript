@@ -1,0 +1,16 @@
+class digunakan untuk template/blueprint yang menghasilkan object
+
+this = mengacu pada object atau class yang menjadi sumbernya
+new = membuat intansiasi baru karena yang dimasukkan adalah data baru dari template "bukan mengubah templatenya"/"agar templatenya tidak berubah"
+
+
+lalu ketika sudah ada object kenapa harus ada object ?
+-class itu berupa blueprint/template yang menghasilkan object
+-object itu instansi class yeng memungkinkan menggunakan variabel dan metode dari dalam kelas
+
+
+***class adalah desain rumah***
+***object adalah rumah yang sudah jadi***
+***Constructor dibuat untuk membuat suatu object dari fungsi atau kelas***
+***instansiasi adalah proses dimana sebuah kelas digunakan untuk membuat sebuah object tersendiri (object dalam kelas)***
+***insansiasi adalah kelas menjadi object***

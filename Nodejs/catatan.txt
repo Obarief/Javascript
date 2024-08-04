@@ -50,10 +50,29 @@ REPL (seperti console di browser)
 
 = untuk mengeksekusi file dari command, menggunakan command (node)
 
-**menganut system module 
+
+**system modules node
+modules = kode yang dapat digunakan kembali
+node modules = sebuah fungsionalitas yang terdapat pada javascript yang dapat dijalankan pada module lain
+
+*contoh kasus
 - pada module function diberi ( module.exports = (nama fungsinya) )
 - pada module index beri require ( const (nama fungsi) = require('path') )
-- panggil module indexnya
+- panggil script indexnya
+
+nodeJS modules :
+- core modules = dari library nodejs (file ssytem, network dll)
+- local modules = modules yang dibuat sendiri (export dan require diperlukan)
+- third party modules = dari orang lain (Node package manager (NPM))
+
+*fungsi require modules akan mencari =
+- cores modules
+- local
+- NPM
+
+
+
+
 
 Command dalam REPL:
 -.load = untuk membaca file
