@@ -149,3 +149,10 @@ coba
 //                     </div>`
 // };
 
+
+// sinkronus
+// - menggunakan try dan catch
+
+// asinkronus
+// jika ada waktu tunggu/file terlalu besar
+// throw error = throw itu sama seperti return/keluar dari function

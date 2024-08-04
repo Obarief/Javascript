@@ -66,12 +66,9 @@ nodeJS modules :
 - third party modules = dari orang lain (Node package manager (NPM))
 
 *fungsi require modules akan mencari =
-- cores modules
+- cores modules :
 - local
 - NPM
-
-
-
 
 
 Command dalam REPL:
