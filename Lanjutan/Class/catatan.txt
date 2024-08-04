@@ -1,7 +1,13 @@
 class digunakan untuk template/blueprint yang menghasilkan object
 
+*this dan new
 this = mengacu pada object atau class yang menjadi sumbernya
-new = membuat intansiasi baru karena yang dimasukkan adalah data baru dari template "bukan mengubah templatenya"/"agar templatenya tidak berubah"
+new = membuat intansiasi/object baru karena yang dimasukkan adalah data baru dari template "bukan mengubah templatenya"/"agar templatenya tidak berubah" dan 
+
+******this dan new tidak akan pernah terpisahkan
+-Constructor dan this mengacu ketika new dibuat (tanpa this maka ketika pemanggilan akan melihat global bukan local)
+-new untuk mengambil nilai this pada function
+
 
 
 lalu ketika sudah ada object kenapa harus ada object ?
@@ -11,6 +17,6 @@ lalu ketika sudah ada object kenapa harus ada object ?
 
 ***class adalah desain rumah***
 ***object adalah rumah yang sudah jadi***
-***Constructor dibuat untuk membuat suatu object dari fungsi atau kelas***
+***Constructor dibuat untuk membuat suatu object dari function atau class***
 ***instansiasi adalah proses dimana sebuah kelas digunakan untuk membuat sebuah object tersendiri (object dalam kelas)***
 ***insansiasi adalah kelas menjadi object***
