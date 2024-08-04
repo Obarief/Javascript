@@ -50,6 +50,11 @@ REPL (seperti console di browser)
 
 = untuk mengeksekusi file dari command, menggunakan command (node)
 
+**menganut system module 
+- pada module function diberi ( module.exports = (nama fungsinya) )
+- pada module index beri require ( const (nama fungsi) = require('path') )
+- panggil module indexnya
+
 Command dalam REPL:
 -.load = untuk membaca file
 -.break/.clear = ketika tidak ingin melanjutkan script
