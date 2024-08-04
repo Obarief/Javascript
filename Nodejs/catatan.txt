@@ -15,7 +15,7 @@ fitur utama
 - buffer = kelola binary dari file
 - http & https = req and resp
 - REPL = eksekusi kode lewat terminal CLI
-- console
+- console 
 - crypto
 - ZLIP
 
