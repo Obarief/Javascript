@@ -33,3 +33,45 @@ const fs = require('fs')
 // })
 
 
+// readline 
+// sinkronus
+// const readline = require('readline');
+// const rl = readline.createInterface({
+//     input: process.stdin, // data yang akan di masukkan ke command prompt
+//     output: process.stdout, // data yang akan dikirim dari command prompt
+// });
+
+// rl.question('masukkan nama anda : ', (nama) => { // callback function digunakan untuk menampung data yang akan di inputkan
+//     rl.question('masukkan nim anda : ', (nim) => {
+        
+//         console.log(`terimakasih ${nama} sudah mengisi data, dan ini nim anda ${nim}`);
+//         rl.close();
+//     });
+// });
+
+
+const readline = require('readline');
+
+const rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout,
+});
+
+rl.question('masukkan nama anda: ', (nama) => {
+    rl.question('masukkan nim anda: ', (nim) => {
+        
+        // membaca data
+        const contact = { nama, nim }; // menjadikan data menjadi object
+        const file = fs.readFileSync('data/contact.json', 'utf-8'); // karena bentuknya string maka pada file jsonnya berikan [] agar terbacanya array (karena tidak boleh kosong)
+        const contacts = JSON.parse(file)// mengubah string menjadi json
+        contacts.push(contact) // karena push maka file akan ditambahkan dibelakangnya bukan menimpa yang lama
+        
+
+        // masukan data ke file
+        fs.writeFileSync('data/contact.json', JSON.stringify(contacts, null, 2)); // strigify merubah json menjadi string, karena dalam witefilesync harus dalam bentuk string
+
+
+        console.log('terimakasih sudah memasukkan data')
+        rl.close();
+    });
+});

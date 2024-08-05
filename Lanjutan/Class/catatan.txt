@@ -2,7 +2,7 @@ class digunakan untuk template/blueprint yang menghasilkan object
 
 *this dan new
 this = mengacu pada object atau class yang menjadi sumbernya
-new = membuat intansiasi/object baru karena yang dimasukkan adalah data baru dari template "bukan mengubah templatenya"/"agar templatenya tidak berubah" dan 
+new = membuat intansiasi/object baru karena yang dimasukkan adalah data baru dari template "bukan mengubah templatenya"/"agar templatenya tidak berubah" 
 
 ******this dan new tidak akan pernah terpisahkan
 -Constructor dan this mengacu ketika new dibuat (tanpa this maka ketika pemanggilan akan melihat global bukan local)
