@@ -5,13 +5,13 @@
   "main": "app.js",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "mulai": "node app"
+    "mulai": "nodemon app"
   },
   "author": "Oktavari",
   "license": "ISC",
   "dependencies": {
     "chalk": "^5.3.0",
+    "nodemon": "^3.1.4",
     "validator": "^13.12.0"
   }
 }
