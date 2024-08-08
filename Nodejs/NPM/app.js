@@ -13,5 +13,3 @@
 // const umur = 20;
 // console.log(`Ram: ${chalk.bgRed('20%')} pada komputer anda yang sedang ${chalk.bgBlack.white.strikethrough('MENYALA!')}, nama anda : ${chalk.bgRed.bold.yellow(nama)}, umur anda ${chalk.bgGreen.bold(umur)}`)
 
-
-// program data kontak
