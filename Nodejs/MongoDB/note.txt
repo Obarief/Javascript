@@ -1,0 +1,14 @@
+mongodb adalah noSQL :
+-document-oriented database
+-Bson (binary (json) object notation)
+-fleksibel (schemaless)
+-skala besar  seperti web (yang tidak terstruktur)
+-tidak memiliki relasi (non relational database) (kalau di mysql menggunakan primary key dan foreign key dll dan mendefinisikan tipe datanya sendiri dan terstruktur)
+-dinamis
+-mendukung berbagai tipe data
+
+
+mongodb = database
+mongodb compass = GUI untuk melakukan pembuatan data
+mongosh(sh = shell) = untuk melakukan pembuatan data dalam bentuk shell (CLI) 
+mongodb atlas = cloud yang disediakan oleh mongodb (dan dapat terhubung ke compass dan shell)
