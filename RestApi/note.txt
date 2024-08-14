@@ -1,0 +1,56 @@
+API = penghubung antar 2 software agar dapat berinteraksi (dalam artian luas)
+
+jika kita membuat web lalu ingin menyambungkannya ke database maka harus ada web service
+- SOAP (Simple Object Access Protocol)
+- Restful (Representational State Transfer) = biasanya komunikasinya melalui HTTP dengan metode standar (Get, Post, Put, Delete)
+
+
+-RestAPI
+-Json
+-Public API
+-Rest Server (javascript) dengan?
+
+RestApi = struktur\aturan yang dibuat agar koneksi\interaksi dapat dibangun secara terstruktur menggunakan protokol HTTP
+
+RestfulAPI = penulisan restapi yang sempurna dengan menggunakan metode, yaitu :
+-Get = meminta data
+-Post = menambah data
+-Put = mengedit data
+-Delete = menghapus data
+
+*tools
+-postman
+
+
+tipe data yang dapat diakui oleh json adalah bsonn, apa itu bsonn ?
+boolean
+string
+Object
+number
+null
+
+
+json.stringify = object menjadi json
+json.parse = json menjadi object
+
+const mahasiswa = {
+    nama: "oktavari",
+    nim: "2103015068",
+    lulus: true
+}
+
+
+// object ke json
+const jadiJson = JSON.stringify(mahasiswa);
+console.log(jadiJson) 
+
+// json ke object
+const jadiObject = JSON.parse(jadiJson)
+console.log(jadiObject)
+
+// file luar json ke object
+fetch('nyoba.json')
+    .then(Response => Response.json())
+    .then(data => {
+        console.log(data)
+    })
