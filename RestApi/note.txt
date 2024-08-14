@@ -33,6 +33,9 @@ null
 json.stringify = object menjadi json
 json.parse = json menjadi object
 
+
+Contoh :
+
 const mahasiswa = {
     nama: "oktavari",
     nim: "2103015068",
