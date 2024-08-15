@@ -57,3 +57,18 @@ fetch('nyoba.json')
     .then(data => {
         console.log(data)
     })
+
+
+// =====================================================================================================================
+
+*Public API/Open API
+-https://any-api.com/
+-https://github.com/public-apis/public-apis
+-https://github.com/farizdotid/DAFTAR-API-LOKAL-INDONESIA
+
+*aturan Public API
+otentikasi
+-tanpa otentikasi
+-key/token
+-oauth = ingin login namun menggunakan via fb atau google dll
+-CORS
