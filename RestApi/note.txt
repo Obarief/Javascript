@@ -72,3 +72,4 @@ otentikasi
 -key/token
 -oauth = ingin login namun menggunakan via fb atau google dll
 -CORS
+
