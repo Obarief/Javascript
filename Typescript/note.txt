@@ -1,0 +1,36 @@
+tipe statis = mendefinisikan secara literal tupe datanya
+
+error warning saat kompilasi = disetiap baris error
+
+autocomplete = penulisan berikutnya akan dibantu (cenayang)
+
+refactoring = agar kode lebih rapih
+
+modularitas = kode dibagi menjadi module"
+
+dekorator = menambah fungsionalitas ke kelas, metode, akses properti, atau parameter secara deklaratif (meningkatkan/modifikasi kode tanpa mengubah kode secara langsung) 
+
+interfaces = kesepakatan tipe data (kapital)
+
+fitur ECMAscript modern = dapat fitur terbaru walau browser belum mendukung
+
+diperuntukan untuk proyek besar
+
+dapat di  kompilasi menjadi javascript
+
+**template penulisan
+*contoh penulisan literal =
+let namaSaya: string = "oktavari"
+let umurSaya: number = 20
+
+*contoh init kosong =
+let namaKamu: string;
+
+*contoh agar outputnya terdapat nama variabel = 
+
+-const namaSaya: string = "oktavari"
+-console.log({ namaSaya }) // {namaSaya: 'oktavari'}
+
+*contoh array dan tuple array
+-array = string[]
+-tuple array = [string, number, boolean]
