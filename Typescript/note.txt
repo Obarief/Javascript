@@ -1,22 +1,24 @@
-tipe statis = mendefinisikan secara literal tupe datanya
+-tipe statis = mendefinisikan secara literal tupe datanya
+-error warning saat kompilasi = disetiap baris error
+-autocomplete = penulisan berikutnya akan dibantu (cenayang)
+-refactoring = agar kode lebih rapih
+-modularitas = kode dibagi menjadi module"
+-dekorator = menambah fungsionalitas ke kelas, metode, akses properti, atau parameter secara deklaratif (meningkatkan/modifikasi kode tanpa mengubah kode secara langsung) 
+-interfaces = kesepakatan tipe data (kapital)
+-fitur ECMAscript modern = dapat fitur terbaru walau browser belum mendukung
+-diperuntukan untuk proyek besar
+-dapat di  kompilasi menjadi javascript
 
-error warning saat kompilasi = disetiap baris error
+**macam macam tipe data ts =
+-void = kosong = undefined(outputnya bisa berisi apapun, contoh = console.log)
+-any = berisi = apapun (inputnya)
+-string
+-number
+-boolean
+-(tipeData)[] = array
+-(tipeData){} = object
 
-autocomplete = penulisan berikutnya akan dibantu (cenayang)
 
-refactoring = agar kode lebih rapih
-
-modularitas = kode dibagi menjadi module"
-
-dekorator = menambah fungsionalitas ke kelas, metode, akses properti, atau parameter secara deklaratif (meningkatkan/modifikasi kode tanpa mengubah kode secara langsung) 
-
-interfaces = kesepakatan tipe data (kapital)
-
-fitur ECMAscript modern = dapat fitur terbaru walau browser belum mendukung
-
-diperuntukan untuk proyek besar
-
-dapat di  kompilasi menjadi javascript
 
 **template penulisan
 *contoh penulisan literal =
@@ -34,3 +36,126 @@ let namaKamu: string;
 *contoh array dan tuple array
 -array = string[]
 -tuple array = [string, number, boolean]
+
+*contoh penggunaan parameter
+
+? jika penentu akhirnya diekspektasikan sebagai void maka tulis dengan variabel baru untuk menampung logikanya
+{ 
+    function create(x:number,y:number): void {
+        const z:number = x + y
+        console.log('halohalohalobandung ' + z)
+    }
+
+    create(20,30)
+}
+
+=====================================================================================================================
+
+? jika sudah diekspektasikan keluarannya adalah number maka tinggal "return" untuk mengembalikan suatu keluaran hasil dengan logika.....
+{ 
+    function add(a:number,b:number): number{
+        return a + b
+    }
+
+    add(20, 40)
+}
+
+=====================================================================================================================
+
+? ketika bukan void ekspektasi keluarannya maka tidak dapat menggunakan console.log, sehingga diakali dengan console.log berada diluar ketika pemanggilan fungsi
+{
+function add(x:number,y:number):string{
+    return `${x} ditambah ${y} hasilnya ${x + y}`
+}
+
+const result = add(20, 30)
+
+console.log(result)
+}
+
+=====================================================================================================================
+
+? penggunaan type digunakan untuk membuat konsistensi penulisan dan pemberian tipe data pada variabel yang telah ditentukan, ? artinya opsional
+{
+        type Orang = {
+        nama: string
+        umur: number
+        hutang?: boolean
+    }
+
+    let teman: Orang
+
+    teman = {
+        nama: "okta",
+        umur : 2,
+    }
+    console.log({ teman })
+
+}
+
+=====================================================================================================================
+
+? interface digunakan untuk membuat pendefinisian dari sebuah object, terutama jika object akan ada di dalam kelas atau menggabungkan deklarasi yang sama
+? type menentukan union/intersection/tuple/mendefinisikan alias pada tipe lain
+{
+            // penentuan package terkecil
+        type PackageCount = 2 | 3 | 4 | 5
+        type PackageName = "dua" | "tiga" | "empat" | "lima"
+
+        // penentuan package memakai angka atau kata
+        type Package = PackageCount | PackageName
+
+        // mockup
+        interface Phone {
+            brand: string
+            isModern: boolean
+            paket: Package
+            android: number
+        }
+
+        // mockup extend from Iphone 1
+        interface Samsung extends Phone {
+            softCase: string
+        }
+
+        // mockup extend from Iphone 2
+        interface Nokia extends Phone {
+            hardCase?: string
+        }
+
+
+        // logic samsung
+        function createSamsung(phone: Samsung): void {
+            console.log(`ini hp bermerek ${phone.brand}, ini termasuk hp yang modern ? ${phone.isModern}, paketnya berapa? ${phone.paket}, dengan versi android ${phone.android}, casingnya apa? ${phone.softCase}`)
+        }
+
+        // logic nokia
+        function createNokia(phone: Nokia): void {
+            console.log(`ini hp bermerek ${phone.brand}, ini termasuk hp yang modern ? ${phone.isModern}, paketnya berapa? ${phone.paket}, dengan versi android ${phone.android}, casingnya apa? ${phone.hardCase ? phone.hardCase : "tidak ada"}`)
+        }
+
+        // value mockup 1
+        const ZFlip: Samsung = {
+            brand: "Samsung",
+            isModern: true,
+            paket: 2,
+            android: 5.3,
+            softCase: "halus"
+        }
+
+        // value mockup 2
+        const Xperia: Nokia = {
+            brand: "Nokia",
+            isModern: false,
+            paket: "lima",
+            android: 3.1,
+            // hardCase: "kasar"
+        }
+
+        // print out value 1
+        createSamsung(ZFlip)
+
+        // print out value 2
+        createNokia(Xperia)
+
+}
