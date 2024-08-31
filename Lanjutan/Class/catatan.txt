@@ -20,3 +20,31 @@ lalu ketika sudah ada object kenapa harus ada object ?
 ***Constructor dibuat untuk membuat suatu object dari function atau class***
 ***instansiasi adalah proses dimana sebuah kelas digunakan untuk membuat sebuah object tersendiri (object dalam kelas)***
 ***insansiasi adalah kelas menjadi object***
+
+
+*simple :
+
+pembuatan class Person
+
+constructor dibuat didalam class dengan parameter nama dan umur
+constructor(nama, umur)
+
+this(mengacu pada class)= this.nama = nama
+                        = this.umur = umur
+
+pemanggilan dalam fungsi
+introduce(){`${this.nama} dan ${this.umur}`}
+
+membuat object baru dengan const nama1 = new Person('ucup', 20)
+
+dan cara memanggilnya nama1.introduce()
+
+
+alur :
+object baru dari Person dibuat -> mengirim data ke fungsi introduce
+
+
+fungsi :
+class = membuat template
+introcude = membuat data yang dimanipulasi
+new Person = membuat object baru dengan data yang sudah diisi dari template yang ada

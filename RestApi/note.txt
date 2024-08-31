@@ -73,3 +73,4 @@ otentikasi
 -oauth = ingin login namun menggunakan via fb atau google dll
 -CORS
 
+*dokumentasi struktur kode ada pada library yang digunakan misal expressjs*

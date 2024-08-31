@@ -1,0 +1,6 @@
+global scope = variabel yang dapat di panggil darimana saja
+function scope = variabel yang hanya dipanggil dalam function tersebut
+block scope = pembuatan scope yang hanya ada di dalam { } = berhubungan dengan let dan const (tidak menggunakan var)
+module scope = variabel yang hanya dapat diakses pada module tersebut
+lexical scope = variabel dapat diakses walau diluar fungsi
+closure scope = hubungannya erat dengan lexical scope = dapat mengembalikan nilai fungsi walau fungsi diluarnya sudah selesai dijalankan (ingatan)
