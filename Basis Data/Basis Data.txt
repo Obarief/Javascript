@@ -1,0 +1,29 @@
+Basis data
+
+Erd(entity relation diagram) toko online:
+
+1. Persegi = entity
+2. oval = attribute
+3. Diamond = relation
+4. Line = link
+
+Model data:
+-entity = penjual, pembeli dan barang
+-atribute = 
+1. atribute key = email, email, barcode
+2. atribute tambahan = nama alamat, nama alamat, nama harga
+-relation = 
+
+
+*Tiap entity menjadi tabel
+*Tiap atributte menjadi kolom
+
+*kardinalitas/derajat relasi
+-one to one 
+-one to many
+-many to one
+-many to many
+
+Attribute key = primary key = key utama dari sebuah entity
+
+Foreign key = 2 key utama dari sebuah relation yang diambil dari primary key dari sebuah entity
