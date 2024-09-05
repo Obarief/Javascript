@@ -1,0 +1,25 @@
+NextJS = menganut SSR dan SSG
+
+*SSR (server side rendering)
+-halaman website akan berubah jika sudah di proses di dalam server
+-setiap kali halaman web berubah maka server bekerja
+-cocok untuk website dinamis
+-*app-router
+-server-centric
+-seperti form yang dinput dan dikirim ke server lalu akan mengembalikan respon ke client
+-teknologi = PHP, ruby on rails, ASP.NET
+
+*SSG (static site generation)
+-halaman web sudah di render saat proses build
+-halaman yang jarang diubah biasanya menggunakan teknologi ini
+-cocok untuk website statis
+-*pages-router
+-client-side
+-halaman html dan css sudah tersedia dan langsung di render tanpa harus mengirim request ke server
+-teknologi = reactjs, angularjs, vuejs
+
+
+
+
+
+
