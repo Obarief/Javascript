@@ -1,0 +1,52 @@
++Skills:
+-junior = database optimization
+-junior = API
+-senior = system design
+
+Main:
+*nodejs = buat RestAPI
+*postgreSQL = database untuk toko online
++redis = konsep, cara membuat key dan pubsub = inmemory database
++kafka = konsep dan topik, producer dan consumer, (+) (-) = message broker
++docker = aplikasi nantinya akan di package dalam docker image dan deploy ke server
++elasticsearch = untuk pencarian yang advanced dalam database
++kubernetes = saat deploy yang menentukan ukuran besar dan cara login logout
++AWS = cloud server
+
+Algortima:
+-binary search
+-bubble sort
+-quick sort
+-merge sort
+-depth-first search
+-breadh-first search
+-dkjstra's algorithm
+-hashing
+-dynamic programming
+-graph traversal algorithm
+
+
+URUTAN BELAJAR =
+NodeJS
+PostgreSQL
+Database Optimization
+Redis
+Docker
+AWS
+Kubernetes
+Kafka
+Elasticsearch
+System Design
+Algoritma Struktur Data
+
+BackEnd :
+✅1. Pelajari dasar-dasar HTTP dan REST API. 
+✅2. Pilih bahasa pemrograman (JavaScript dengan Node.js).
+✅3. Pelajari framework Express.js.
+✅4. Pahami database dan ORM (misalnya, MongoDB dengan Mongoose).
+✅5. Buat API sederhana (CRUD).
+✅6. Implementasi middleware (logging, otentikasi).
+✅7. Gunakan Postman atau Insomnia untuk pengujian API.
+8. Pelajari autentikasi dan otorisasi (JWT).
+✅9. Optimalkan dan amankan API (rate limiting, validasi input).
+10. Pelajari deployment (Heroku, AWS).
